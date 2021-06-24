@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-sqlite" %}
-{% set version = "1.0.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-sqlite-{{ version }}.tar.gz
-  sha256: ac0fbfc18d68028aab3c204d1d43cd0cff7bb24609e6360af162f96b77a54a73
+  sha256: 817c8a5e3d8768124cd75301a84866733d7496805040ba426854073dd9311224
 
 build:
   number: 0
