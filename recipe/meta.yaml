@@ -21,8 +21,6 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - gitpython
-    - wheel
 
 test:
   imports:
