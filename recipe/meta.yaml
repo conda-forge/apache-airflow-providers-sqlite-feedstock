@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-sqlite" %}
-{% set version = "3.9.1" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_sqlite-{{ version }}.tar.gz
-  sha256: 65459e0f1d54bfcb798d0b21050ce2348db018fa502c68e3c919b75e6bac9086
+  sha256: b667c94b9f4e71fb7d1392bec9018fcc8fef8a8741edb0f248221a9e56e7b1e5
 
 build:
   noarch: python
@@ -20,9 +20,10 @@ requirements:
     - flit-core ==3.10.1
     - pip
   run:
+    - aiosqlite >=0.20.0
     - python >={{ python_min }}
     - apache-airflow-providers-common-sql >=1.20.0
-    - apache-airflow >=2.8.0
+    - apache-airflow >=2.9.0
 
 test:
   imports:
