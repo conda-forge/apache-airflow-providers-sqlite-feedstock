@@ -20,8 +20,8 @@ requirements:
     - flit-core ==3.10.1
     - pip
   run:
-    - aiosqlite >=0.20.0
     - python >={{ python_min }}
+    - aiosqlite >=0.20.0
     - apache-airflow-providers-common-sql >=1.20.0
     - apache-airflow >=2.9.0
 
