@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.1
+    - flit-core ==3.11.0
     - pip
   run:
     - python >={{ python_min }}
+    - apache-airflow >=2.9.0
     - aiosqlite >=0.20.0
     - apache-airflow-providers-common-sql >=1.20.0
-    - apache-airflow >=2.9.0
 
 test:
   imports:
@@ -38,7 +38,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-sqlite for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/sqlite/LICENSE
+  license_file: src/airflow/providers/sqlite/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-sqlite/stable/index.html
   dev_url: https://github.com/apache/airflow/
