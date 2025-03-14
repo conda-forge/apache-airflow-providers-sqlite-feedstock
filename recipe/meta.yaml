@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-sqlite" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_sqlite-{{ version }}.tar.gz
-  sha256: b667c94b9f4e71fb7d1392bec9018fcc8fef8a8741edb0f248221a9e56e7b1e5
+  sha256: 91b004648477f586d1edb42fdb37b972c1ae5e8d7a4301411254b5c3524c81e3
 
 build:
   noarch: python
@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core ==3.10.1
+    - flit-core ==3.11.0
     - pip
   run:
     - python >={{ python_min }}
+    - apache-airflow >=2.9.0
     - aiosqlite >=0.20.0
     - apache-airflow-providers-common-sql >=1.20.0
-    - apache-airflow >=2.9.0
 
 test:
   imports:
@@ -38,7 +38,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-sqlite for Apache Airflow
   license: Apache-2.0
-  license_file: airflow/providers/sqlite/LICENSE
+  license_file: src/airflow/providers/sqlite/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-sqlite/stable/index.html
   dev_url: https://github.com/apache/airflow/
