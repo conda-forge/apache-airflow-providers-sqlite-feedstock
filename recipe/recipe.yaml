@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-sqlite
-  version: 4.3.0
+  version: "4.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -24,6 +24,7 @@ requirements:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-sql >=1.32.0
+
 tests:
   - python:
       imports:
