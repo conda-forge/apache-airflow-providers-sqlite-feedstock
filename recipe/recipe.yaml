@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-sqlite
-  version: "4.3.3"
+  version: "4.3.4"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_sqlite-${{ version }}.tar.gz
-  sha256: 4a4cae6dd9b26cc74ce887635f4903ff71b17ff540024468aa8059a3dfe6c2c6
+  sha256: fd0a10b80431d545fd4f7073744e03aaaf3ebda88dbb6eb4b40f21137c0e6e24
 
 build:
   noarch: python
